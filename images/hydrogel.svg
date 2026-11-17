@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 130" fill="none">
+  <rect width="200" height="130" rx="6" fill="none"/>
+  <path d="M31 41L105 20L170 48L97 72L31 41Z" fill="#e8ece2" stroke="#9bab9d"/>
+  <path d="M31 41V86L97 115V72L31 41Z" fill="#e0e7dc" stroke="#9bab9d"/>
+  <path d="M97 72L170 48V91L97 115V72Z" fill="#d2ded2" stroke="#8fa18f"/>
+  <g stroke="#aab9a5" stroke-width="1">
+    <path d="M55 34L122 64V107M80 27L146 56V99M53 51L128 30M75 62L151 40M31 56L97 86L170 63M31 71L97 101L170 78M53 51V96M75 62V105"/>
+  </g>
+  <g stroke="#b38e50" stroke-width="1.1">
+    <ellipse cx="84" cy="46" rx="11" ry="7" transform="rotate(22 84 46)" fill="#e9d7b0"/>
+    <ellipse cx="135" cy="46" rx="9" ry="6" transform="rotate(-12 135 46)" fill="#e9d7b0"/>
+    <ellipse cx="60" cy="77" rx="8" ry="11" transform="rotate(-27 60 77)" fill="#eadab9"/>
+    <ellipse cx="135" cy="83" rx="10" ry="7" transform="rotate(-26 135 83)" fill="#eadab9"/>
+  </g>
+  <g fill="#b48b45"><circle cx="84" cy="46" r="2.4"/><circle cx="135" cy="46" r="2"/><circle cx="60" cy="77" r="2.5"/><circle cx="135" cy="83" r="2.5"/></g>
+  <g fill="#7e9681"><circle cx="31" cy="41" r="2"/><circle cx="97" cy="72" r="2"/><circle cx="170" cy="48" r="2"/><circle cx="97" cy="115" r="2"/><circle cx="105" cy="20" r="2"/></g>
+</svg>
