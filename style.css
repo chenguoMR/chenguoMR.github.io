@@ -78,3 +78,34 @@ html[lang="en"] .paper-meta{flex-wrap:wrap}
   html[lang="en"] .filters button{line-height:1.6}
   html[lang="en"] .figure-dialog-header{align-items:flex-start}
 }
+
+/* Phalloidin illustration in the cell and tissue repair card. */
+.card-visual--phalloidin {
+  padding: 0;
+  overflow: hidden;
+  background: #000;
+}
+.card-visual--phalloidin img {
+  width: 100%;
+  height: auto;
+}
+.research-card:hover .card-visual--phalloidin img {
+  transform: none;
+}
+@media (max-width: 768px) {
+  .card-visual--phalloidin {
+    height: auto;
+  }
+}
+
+/* Locally approved 3D concept animation in the cell-subpopulation card. */
+#research-material .card-visual--point-cloud{margin:0;padding:0;background:#010204;overflow:hidden;align-items:center}
+#research-material .research-video{display:block;width:100%;max-width:100%;height:auto;aspect-ratio:4/3;object-fit:contain;background:#010204}
+#research-material .research-video:focus-visible{outline:3px solid #7ea7cb;outline-offset:-3px}
+@media(max-width:768px){#research-material .card-visual--point-cloud{height:auto;min-height:0;padding:0}}
+
+/* Full-face anatomical scan in the clinical AI card. */
+#research-imaging .card-visual--xray{margin:0;padding:0;background:#000;overflow:hidden;align-items:center}
+#research-imaging .research-video--portrait{display:block;width:100%;max-width:100%;height:auto;max-height:380px;aspect-ratio:5/6;object-fit:contain;background:#000}
+#research-imaging .research-video--portrait:focus-visible{outline:3px solid #7ea7cb;outline-offset:-3px}
+@media(max-width:768px){#research-imaging .card-visual--xray{height:auto;min-height:0;padding:0}#research-imaging .research-video--portrait{max-height:420px}}
