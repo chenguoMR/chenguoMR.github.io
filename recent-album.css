@@ -1,0 +1,54 @@
+#news .album-card {
+  display: grid;
+  align-items: center;
+  padding: clamp(12px, 2vw, 23px) 5px;
+  background: #fff;
+  overflow: hidden;
+}
+html[lang="en"] #news .section-kicker { display: block; }
+
+.album-stage {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1.67;
+  isolation: isolate;
+  touch-action: pan-y pinch-zoom;
+  -webkit-tap-highlight-color: transparent;
+}
+.album-cover {
+  appearance: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 52%;
+  aspect-ratio: 1;
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: clamp(6px, 1vw, 10px);
+  background: transparent;
+  box-shadow: 0 4px 11px -4px rgba(19, 23, 27, .23);
+  user-select: none;
+  -webkit-user-select: none;
+  cursor: pointer;
+  transform: translate(-50%, -50%) translateX(var(--x, 0%)) perspective(750px) rotateY(var(--yaw, 0deg)) scale(var(--scale, 1));
+}
+/* Match the first resting pose while the script loads. */
+.album-cover[data-slot="0"]  { z-index: 3; }
+.album-cover[data-slot="-1"] { --x: -62%; --yaw: 69deg; --scale: .89; z-index: 2; }
+.album-cover[data-slot="1"]  { --x:  62%; --yaw: -69deg; --scale: .89; z-index: 2; }
+.album-cover[data-slot="-2"] { --x: -80%; --yaw: 78deg; --scale: .82; z-index: 1; }
+.album-cover[data-slot="2"]  { --x:  80%; --yaw: -78deg; --scale: .82; z-index: 1; }
+.album-cover img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  object-fit: cover;
+  object-position: var(--crop, 50% 50%);
+  pointer-events: none;
+}
+.album-cover:focus-visible { outline: 3px solid #42749b; outline-offset: 3px; }
+.album-stage[data-moving] .album-cover { will-change: transform, opacity; }
+.album-stage[data-dragging] .album-cover { cursor: grabbing; }
